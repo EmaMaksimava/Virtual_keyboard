@@ -74,4 +74,12 @@ export default class Keyboard {
       keyObj.wrapper.classList.remove('active');
     }
   }
+
+  switchLanguage = () => {
+    const langAbbr = Object.keys(language);
+    let langIndex = langAbbr.indexOf(this.container.dataset.language);
+    this.keyBase = langIndex + 1 < langAbbr.length ? language[langAbbr[langIndex += 1]] : language[langAbbr[langIndex -= langIndex]];
+    this.container.dataset.language = langAbbr[langIndex];
+    storage.set('kbLang', langAbbr[langIndex]);
+  }
 }
