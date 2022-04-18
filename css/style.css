@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif;
+}
+
+main {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  background-color: rgb(198, 197, 197);
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.338);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  color: rgb(255, 174, 0);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.338);
+}
+
+.output {
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.keyboard {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 174, 0);
+  border-radius: 5px;
+  gap: 8px;
+}
+
+.keyboard__row {
+  display: grid;
+  column-gap: 8px;
+}
+
+.keyboard__key {
+  min-width: 65px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(198, 197, 197);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.active {
+  background-color: burlywood;
+}

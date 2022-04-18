@@ -1,4 +1,4 @@
-import create from './utils/create';
+import create from './utils/create.js';
 
 export default class Key {
   constructor({ standart, shift, code }) {
@@ -14,6 +14,6 @@ export default class Key {
     }
 
     this.letter = create('div', 'letter', standart);
-    this.wrapper = create('div', 'keyboard__key', [this.sub, this.letter], null, ['code', this.code]);
+    this.wrapper = create('div', 'keyboard__key', [this.sub, this.letter], null, ['code', this.code], this.isFnKey ? ['fn', 'true'] : ['fn', 'false']);
   }
 }
